@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardUseCompatPadding="true"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardElevation="2dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+            <TextView
+            android:id="@+id/txtBloqueDG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/swDG"
+            android:layout_marginLeft="5dp"
+            android:text="DATOS GENERALES DEL CLIENTE"
+            android:textColor= "@color/colorPrimaryDark"
+            android:textSize="18sp" />
+
+            <Switch
+            android:id="@+id/swDG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:checked="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativDATOSGENERALES"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/txtIP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Informacion Personal General"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+
+
+            <LinearLayout
+                android:id="@+id/linearFN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txtIP"
+                android:orientation="horizontal"
+                >
+
+                <!--
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_weight="2"
+                    android:hint="CP">
+
+                    <EditText
+                        android:id="@+id/editTextCP"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        android:maxLength="5"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_weight="1"
+                    android:hint="Ciudad">
+
+                    <EditText
+                        android:id="@+id/editTextCiudad"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:inputType="text"/>
+                </android.support.design.widget.TextInputLayout>
+
+                -->
+
+
+                <!-- -->
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/txtFN"
+                    android:src="@drawable/ic_comment_black_24dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/etFN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/linearNombre"
+                    android:layout_toRightOf="@+id/linearNombre"
+                    app:errorTextAppearance="@style/error">
+
+
+                <EditText
+                    android:id="@+id/ediFECHA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="FECHA NACIMIENTO (DD/MM/YYYY)"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="250"
+                    android:padding="7dp"
+                    android:textSize="13sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+            <!--          -->
+
+            <LinearLayout
+                android:id="@+id/linearNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearFN"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/txtFN"
+                    android:src="@drawable/ic_comment_black_24dp" />
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/etNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/linearNombre"
+                    android:layout_toRightOf="@+id/linearNombre"
+                    app:errorTextAppearance="@style/error">
+
+                <EditText
+                    android:id="@+id/editNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="NOMBRE"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="250"
+                    android:padding="7dp"
+                    android:textSize="13sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+            <!--            -->
+
+
+            <LinearLayout
+                android:id="@+id/linearAP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearNombre"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/txtFN"
+                    android:src="@drawable/ic_comment_black_24dp" />
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/etAP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/linearAP"
+                    android:layout_toRightOf="@+id/linearAP"
+                    app:errorTextAppearance="@style/error">
+
+                    <EditText
+                        android:id="@+id/editAP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:hint="APELLIDO PATERNO"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="250"
+                        android:padding="7dp"
+                        android:textSize="13sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <!--                    -->
+
+
+            <LinearLayout
+                android:id="@+id/linearAM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearAP"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/txtFN"
+                    android:src="@drawable/ic_comment_black_24dp" />
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/etAM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/linearAM"
+                    android:layout_toRightOf="@+id/linearAM"
+                    app:errorTextAppearance="@style/error">
+
+                    <EditText
+                        android:id="@+id/editAM"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:hint="APELLIDO MATERNO"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="250"
+                        android:padding="7dp"
+                        android:textSize="13sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+            <!--  -->
+
+            <LinearLayout
+                android:id="@+id/linearCOM0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearAM"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="LUGAR DE NACIMIENTO"
+                        android:id="@+id/txtLN"
+                        />
+
+                    <Spinner
+                        android:id="@+id/spLN"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtLN"
+                        android:entries="@array/array_estados"
+                        android:textAlignment="center"
+                        />
+                </RelativeLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_weight="1"
+                    android:hint="EDAD">
+
+                    <EditText
+                        android:id="@+id/editTextEDAD"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:inputType="text"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+
+
+
+            <!-- -->
+
+            <LinearLayout
+
+                android:id="@+id/linearCOMBO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:baselineAligned="false"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/linearCOM0"
+
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="SEXO"
+                        android:id="@+id/txtsexo"
+                        />
+
+                    <Spinner
+                        android:id="@+id/spSexo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/array_sexo"
+                        android:layout_below="@+id/txtsexo"
+                        android:textAlignment="center"
+                        />
+                </RelativeLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_weight="1"
+                    android:hint="CURP">
+
+                    <EditText
+                        android:id="@+id/editTextCURP"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:inputType="text"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <!--   -->
+
+
+
+            <!-- -->
+
+
+            <LinearLayout
+                android:id="@+id/linearTF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearCOMBO"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/txtFN"
+                    android:src="@drawable/ic_comment_black_24dp" />
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/etTF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/linearTF"
+                    android:layout_toRightOf="@+id/linearTF"
+                    app:errorTextAppearance="@style/error">
+
+                    <EditText
+                        android:id="@+id/editTF"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:hint="TELEFONO FIJO"
+                        android:padding="7dp"
+                        android:textSize="13sp"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+            <!-- -->
+
+
+            <LinearLayout
+                android:id="@+id/linearTM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearTF"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/txtFN"
+                    android:src="@drawable/ic_comment_black_24dp" />
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/etTM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/linearTM"
+                    android:layout_toRightOf="@+id/linearTM"
+                    app:errorTextAppearance="@style/error">
+
+                    <EditText
+                        android:id="@+id/editTM"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:hint="TELEFONO MOVIL"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:padding="7dp"
+                        android:textSize="13sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txtDIR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Direccion"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/linearTM"
+                android:textSize="15sp" />
+
+
+
+            <!-- -->
+
+
+            <LinearLayout
+                android:id="@+id/linearCOM1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txtDIR"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_weight="2"
+                    android:hint="CP">
+
+                    <EditText
+                        android:id="@+id/editTextCP"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        android:maxLength="5"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_weight="1"
+                    android:hint="MUNICIPIO">
+
+                    <EditText
+                        android:id="@+id/editTextMUNICIPIO"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:inputType="text"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <!-- -->
+
+
+            <LinearLayout
+                android:id="@+id/linearCOM2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearCOM1"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_weight="1"
+                    android:hint="ESTADO">
+
+                    <EditText
+                        android:id="@+id/editTextEstado"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:inputType="text"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_weight="1"
+                    android:hint="COLONIA"
+                    android:id="@+id/TIL"
+                    >
+
+                    <EditText
+                        android:id="@+id/editTextCOLONIA"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:inputType="text"
+                        android:visibility = "visible"
+
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/SpColonia"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:entries="@array/array_sexo"
+                    android:visibility = "gone"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
+
+            <!-- -->
+
+            <LinearLayout
+                android:id="@+id/linearCOM2Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearCOM1"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_weight="1"
+                    android:hint="ESTADO">
+
+                    <EditText
+                        android:id="@+id/editTextEstadoSpinner"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        android:maxLength="5"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/spColonia"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:entries="@array/array_sexo"
+                    />
+            </LinearLayout>
+
+            <!-- -->
+
+
+            <LinearLayout
+                android:id="@+id/linearCALLE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearCOM2"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/txtFN"
+                    android:src="@drawable/ic_comment_black_24dp" />
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/etCALLE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/linearCALLE"
+                    android:layout_toRightOf="@+id/linearCALLE"
+                    app:errorTextAppearance="@style/error">
+
+                    <EditText
+                        android:id="@+id/editCALLE"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:hint="CALLE"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="250"
+                        android:padding="7dp"
+                        android:textSize="13sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <!-- -->
+
+            <LinearLayout
+                android:id="@+id/linearCOM3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearCALLE"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_weight="1"
+                    android:hint="NUMERO EXTERIOR">
+
+                    <EditText
+                        android:id="@+id/editTextNE"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:inputType="number"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_weight="1"
+                    android:hint="NUMERO INTERIOR">
+
+                    <EditText
+                        android:id="@+id/editTextNI"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="15sp"
+                        android:inputType="number"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+
+
+
+
+            <!-- -->
+
+            <LinearLayout
+                android:id="@+id/linearCOM4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearCOM3"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="ESTADO CIVIL"
+                        android:id="@+id/EstadoCivil"
+                        />
+
+                    <Spinner
+                        android:id="@+id/SpEstadoCivil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/array_estado_civil"
+                        android:layout_below="@+id/EstadoCivil"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="HIJOS"
+                        android:id="@+id/hijos"
+                        />
+
+                    <Spinner
+                        android:id="@+id/SpHijos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/respuesta_cerrada"
+                        android:layout_below="@+id/hijos"
+                        />
+                </RelativeLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_weight="1"
+                    android:hint="NUMERO HIJOS"
+                    android:id="@+id/etHijos"
+                    >
+
+                    <EditText
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+            <!-- -->
+            <LinearLayout
+                android:id="@+id/linearCOM5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearCOM4"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="RESIDENCIA"
+                        android:id="@+id/residencia"
+                        />
+
+                    <Spinner
+                        android:id="@+id/SpResidencia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/array_residencia"
+                        android:layout_below="@+id/residencia"
+                        />
+                </RelativeLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_weight="1"
+                    android:hint="AÑO"
+                    android:id="@+id/ano"
+                    >
+
+                    <EditText
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_weight="1"
+                    android:hint="MES"
+                    android:id="@+id/mes"
+                    >
+
+                    <EditText
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+        <!-- -->
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>

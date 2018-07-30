@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">MIGA_vistas</string>
+
+    <string name="pref_default_base_url">https://pruebasmc.com.mx/</string>
+
+    <string name="app_address">MillaWSMovil/</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="comentario">Comentario</string>
+
+    <string-array name="array_sexo">
+            <item>F</item>
+            <item>M</item>
+    </string-array>
+
+
+    <string-array name="array_estado_civil">
+        <item>Soltero</item>
+        <item>Casado</item>
+        <item>Divorciado</item>
+        <item>Viudo</item>
+    </string-array>
+
+    <string-array name="array_residencia">
+        <item>Propia</item>
+        <item>Vive con familiar</item>
+        <item>Rentada</item>
+    </string-array>
+
+
+    <string-array name="respuesta_cerrada">
+        <item>No</item>
+        <item>Si</item>
+    </string-array>
+
+
+
+    <string-array name="array_estados">
+        <item>Aguascalientes</item>
+        <item>Baja California</item>
+        <item>Baja California Sur</item>
+        <item>Campeche</item>
+        <item>CDMX</item>
+        <item>Chihuahua</item>
+        <item>Chiapas</item>
+        <item>Coahuila</item>
+        <item>Colima</item>
+        <item>Durango</item>
+        <item>Guanajuato</item>
+        <item>Guerrero</item>
+        <item>Hidalgo</item>
+        <item>Jalisco</item>
+        <item>Estado de Mexico</item>
+        <item>Michoacan</item>
+        <item>Morelos</item>
+        <item>Nayarit</item>
+        <item>Nuevo Leon</item>
+        <item>Oaxaca</item>
+        <item>Puebla</item>
+        <item>Queretaro</item>
+        <item>Quintana Roo</item>
+        <item>San Luis Potosí</item>
+        <item>Sinaloa</item>
+        <item>Sonora</item>
+        <item>Tabasco</item>
+        <item>Tamaulipas</item>
+        <item>Tlaxcala</item>
+        <item>Veracruz</item>
+        <item>Yucatan</item>
+        <item>Zacatecas</item>
+        <item>NACIO EN EL EXTRANJERO</item>
+    </string-array>
+
+
+</resources>
+
+
+
+
+
+
+
+
+
+
+

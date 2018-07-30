@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardUseCompatPadding="true"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardElevation="2dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/swIL"
+                    android:layout_marginLeft="5dp"
+                    android:text="INFORMACION LABORAL"
+                    android:textColor= "@color/colorPrimaryDark"
+                    android:textSize="18sp" />
+
+                <Switch
+                    android:id="@+id/swIL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:checked="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativINFOLABORAL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:id="@+id/txtDATOSDELAEMPRESA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Datos de la Empresa"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    />
+
+
+                <LinearLayout
+                    android:id="@+id/linearNombreEmpresa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txtDATOSDELAEMPRESA"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_comment_black_24dp" />
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/etNombreEmpresa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@+id/linearNombre"
+                        android:layout_toRightOf="@+id/linearNombre"
+                        app:errorTextAppearance="@style/error">
+
+                        <EditText
+                            android:id="@+id/editNombre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="NOMBRE EMPRESA"
+                            android:inputType="textCapCharacters"
+                            android:maxLength="250"
+                            android:padding="7dp"
+                            android:textSize="13sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <!-- -->
+
+                <LinearLayout
+                    android:id="@+id/linearCOM1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/linearNombreEmpresa"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_weight="2"
+                        android:hint="CP">
+
+                        <EditText
+                            android:id="@+id/editTextCPIL"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="15sp"
+                            android:inputType="number"
+                            android:maxLength="5"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_weight="1"
+                        android:hint="MUNICIPIO">
+
+                        <EditText
+                            android:id="@+id/editTextMUNICIPIOIL"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="15sp"
+                            android:inputType="text"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <!-- -->
+
+                <LinearLayout
+                    android:id="@+id/linearCOM2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/linearCOM1"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_weight="1"
+                        android:hint="ESTADO">
+
+                        <EditText
+                            android:id="@+id/editTextEstadoIL"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="15sp"
+                            android:inputType="text"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_weight="1"
+                        android:hint="COLONIA"
+                        android:id="@+id/TIIL"
+                        >
+
+                        <EditText
+                            android:id="@+id/editTextCOLONIAIL"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="15sp"
+                            android:inputType="text"
+                            android:visibility = "visible"
+
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Spinner
+                        android:id="@+id/SpColoniaIL"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility = "gone"
+                        android:layout_weight="1"
+                        />
+
+                </LinearLayout>
+
+                <!-- -->
+
+                <LinearLayout
+                    android:id="@+id/linearCALLEIL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/linearCOM2"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_comment_black_24dp" />
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/etCalleIL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@+id/linearNombre"
+                        android:layout_toRightOf="@+id/linearNombre"
+                        app:errorTextAppearance="@style/error">
+
+                        <EditText
+                            android:id="@+id/editCalleIL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="CALLE"
+                            android:inputType="textCapCharacters"
+                            android:maxLength="250"
+                            android:padding="7dp"
+                            android:textSize="13sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <!-- -->
+
+                <LinearLayout
+                    android:id="@+id/linearCOM3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/linearCALLEIL"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_weight="1"
+                        android:maxLength="10"
+                        android:hint="NUMERO EXTERIOR">
+
+                        <EditText
+                            android:id="@+id/editTextNEIL"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="15sp"
+                            android:inputType="number"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_weight="1"
+                        android:maxLength="10"
+                        android:hint="NUMERO INTERIOR">
+
+                        <EditText
+                            android:id="@+id/editTextNIIL"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="15sp"
+                            android:inputType="number"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <!-- -->
+
+                <LinearLayout
+                    android:id="@+id/linearCOM4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/linearCOM3"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_weight="1"
+                        android:maxLength="10"
+                        android:hint="TELEFONO">
+
+                        <EditText
+                            android:id="@+id/editTelefonoIL"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="15sp"
+                            android:inputType="number"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_weight="1"
+                        android:maxLength="10"
+                        android:hint="EXTENCION">
+
+                        <EditText
+                            android:id="@+id/editExtencionIL"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="15sp"
+                            android:inputType="number"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <!-- -->
+
+                <LinearLayout
+                    android:id="@+id/linearCORREOIL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/linearCOM4"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_comment_black_24dp" />
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/etCorreoIL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@+id/linearNombre"
+                        android:layout_toRightOf="@+id/linearNombre"
+                        app:errorTextAppearance="@style/error">
+
+                        <EditText
+                            android:id="@+id/editCorreoIL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="CORREO EMPRESA"
+                            android:inputType="textCapCharacters"
+                            android:maxLength="250"
+                            android:padding="7dp"
+                            android:textSize="13sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <!-- -->
+
+                <TextView
+                    android:id="@+id/txtDATOSLABORALESDELCLIENTE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Datos Laborales Cliente"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/linearCORREOIL"
+                    />
+                <!-- -->
+
+                <LinearLayout
+                    android:id="@+id/linearPuesto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txtDATOSLABORALESDELCLIENTE"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_comment_black_24dp" />
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/etPuesto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@+id/linearNombre"
+                        android:layout_toRightOf="@+id/linearNombre"
+                        app:errorTextAppearance="@style/error">
+
+                        <EditText
+                            android:id="@+id/editPuesto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="PUESTO"
+                            android:inputType="textCapCharacters"
+                            android:maxLength="250"
+                            android:padding="7dp"
+                            android:textSize="13sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <!-- -->
+
+                <LinearLayout
+                    android:id="@+id/linearCOM5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/linearPuesto"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_weight="3"
+                        android:hint="ANTIGUEDAD">
+
+                        <EditText
+                            android:id="@+id/editTextAntiguedad"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="15sp"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_weight="1"
+                        android:hint="NOMBRE JEFE INMEDIATO"
+                        >
+
+                        <EditText
+                            android:id="@+id/editTextNJ"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="15sp"
+                            android:inputType="text"
+                            android:visibility = "visible"
+
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <!-- -->
+
+                <LinearLayout
+                    android:id="@+id/linearCOM6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/linearCOM5"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_weight="1"
+                        android:hint="NUMERO DE EMPLEADO">
+
+                        <EditText
+                            android:id="@+id/editTextNE"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="15sp"
+                            android:inputType="text"
+                            android:maxLength="10"
+                            />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_weight="1"
+                        android:hint="INGRESO MENSUAL"
+                        >
+
+                        <EditText
+                            android:id="@+id/editTextIM"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="15sp"
+                            android:inputType="number"
+                            android:visibility = "visible"
+
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <!-- -->
+                <TextView
+                    android:id="@+id/txtINFORMACIONCREDITICIA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Informacion Crediticia"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/linearCOM6"
+                    />
+
+                <!-- -->
+
+                <LinearLayout
+                    android:id="@+id/linearCOM7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txtINFORMACIONCREDITICIA"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="CUENTA CON UN CREDITO"
+                            android:id="@+id/txtLN"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spPC"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtLN"
+                            android:entries="@array/respuesta_cerrada"
+                            />
+                    </RelativeLayout>
+
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_weight="1"
+                        android:hint="CUAL?"
+                        android:id="@+id/etCual"
+                        >
+
+                        <EditText
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="15sp"
+                            android:inputType="text"
+                            android:id="@+id/rc"
+
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <!-- -->
+
+                <LinearLayout
+                    android:id="@+id/linearCOM8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/linearCOM7"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TIENE PRESTAMOS"
+                            android:id="@+id/txtLN1"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spTP"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtLN1"
+                            android:entries="@array/respuesta_cerrada"
+                            />
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TIENE CAJA DE AHORROS"
+                            android:id="@+id/txtLN2"
+                            />
+
+                        <Spinner
+                            android:id="@+id/spTC"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtLN2"
+                            android:entries="@array/respuesta_cerrada"
+                            />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>
